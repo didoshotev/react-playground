@@ -3,6 +3,7 @@ import { connect } from "react-redux";
 import * as courseActions from "../../redux/actions/courseActions";
 import * as authorActions from "../../redux/actions/authorActions";
 import PropTypes from "prop-types";
+import CourseForm from "../CourseForm/CourseForm";
 
 const ManageCourse = ({ courses, authors, loadAuthors, loadCourses }) => {
   useEffect(() => {
@@ -12,17 +13,8 @@ const ManageCourse = ({ courses, authors, loadAuthors, loadCourses }) => {
 
   return (
     <>
-      {/* <form onSubmit={this.handleSubmit}>
-          <h2>Courses</h2>
-          <h3>Add course</h3>
-          <input
-            type="text"
-            onChange={this.handleChange}
-            value={this.state.course.title}
-          />
-          <input type="submit" value="Save" />
-        </form> */}
       <h3>Manage Courses</h3>
+      <CourseForm />
     </>
   );
 };
